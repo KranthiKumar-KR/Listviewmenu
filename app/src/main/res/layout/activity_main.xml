@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.example.kranthi.listviewmenu"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kranthi.listviewmenu.MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/actv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="auto complete text view"
+        android:imeOptions="actionNext"
+        android:singleLine="true" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/mactv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actv"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Multiple auto complete text view"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
+
+    <ExpandableListView
+        android:id="@+id/elv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#000000"
+        android:dividerHeight="0.5dp"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:layout_alignTop="@+id/mactv"
+        android:layout_alignRight="@+id/mactv"
+        android:layout_alignEnd="@+id/mactv">
+
+
+    </ExpandableListView>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_below="@+id/elv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#ffffff"
+        android:background="#ffffff">
+
+    </ListView>
+</RelativeLayout>
